@@ -1,4 +1,6 @@
 from http.server import BaseHTTPRequestHandler, HTTPServer
+from http.server import BaseHTTPRequestHandler, HTTPServer
+from views import get_all_animals
 
 
 # Here's a class. It inherits from another class.
@@ -50,11 +52,7 @@ class HandleRequests(BaseHTTPRequestHandler):
         if self.path == "/animals":
             # In Python, this is a list of dictionaries
             # In JavaScript, you would call it an array of objects
-            response = [
-                {"id": 1, "name": "Snickers", "species": "Dog"},
-                {"id": 2, "name": "Lenny", "species": "Cat"}
-            ]
-
+            response = get_all_animals()
         else:
             response = []
 
