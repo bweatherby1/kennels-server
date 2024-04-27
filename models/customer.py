@@ -1,9 +1,8 @@
 class Customer():
-    def __init__(self, id, name, age):
+
+    def __init__(self, id, name, address, email = "", password = ""):
         self.id = id
         self.name = name
-        self.age = age
-        
-new_customer = Customer(1, "Brad", 21)
-
-print(new_customer.name)
+        self.address = address
+        self.email = email
+        self.password = password
